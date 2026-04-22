@@ -1,0 +1,138 @@
+body {
+  background-color: #f7f9f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #2c3e2e;
+  overflow: hidden;
+}
+
+.nature-container {
+  text-align: center;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 2px solid #b7c3aa;
+  max-width: 88%;
+  margin: 15px;
+  position: relative;
+}
+
+.photo-frame img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 5px solid #6c8c72;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.elegant-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #435e47;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #6c8c72;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.hidden { display: none; }
+
+.leaf-scratch-container {
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #c8d6bf;
+}
+
+.leaf-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(88, 129, 87, 0.9);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  z-index: 10;
+}
+
+.instruction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-style: italic;
+  font-size: 0.9rem;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.scratch-leaf {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out, transform 0.3s ease-in;
+}
+
+.scratch-leaf.cleared {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hidden-message {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+  padding: 20px;
+  z-index: 5;
+}
+
+.hidden-message.show {
+  opacity: 1;
+}
+
+.letter-style {
+  background: rgba(234, 241, 233, 0.5);
+  padding: 15px;
+  border-left: 4px solid #6c8c72;
+  border-radius: 10px;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.final-touch {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  color: #435e47;
+}
+
+.core-message {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 10px;
+  color: #e66a7b;
+}
+
+@keyframes fall {
+  to { transform: translateY(105vh) rotate(360deg); }
+}
